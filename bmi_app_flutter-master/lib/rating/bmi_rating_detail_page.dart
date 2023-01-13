@@ -21,6 +21,7 @@ class _BmiRatingDetailPageState extends State<BmiRatingDetailPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('BMI Rating Detail'),
+        backgroundColor: Colors.brown,
       ),
       body: Column(
         children: <Widget>[

@@ -4,7 +4,6 @@ import 'package:bmi_app_flutter/rating/bmi_rating_page.dart';
 import 'package:flutter/material.dart';
 
 import '../calculator/home_page.dart';
-import '../users/users.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({Key? key}) : super(key: key);

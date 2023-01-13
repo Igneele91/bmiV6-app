@@ -27,8 +27,10 @@ class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
   Widget build(BuildContext context) {
     // Build a Form widget using the _formKey created above.
     return Scaffold(
+        backgroundColor: Colors.blueGrey,
         appBar: AppBar(
           title: const Text('BMI Calculator'),
+          backgroundColor: Colors.brown,
         ),
         drawer: const CustomDrawer(),
         body: Form(

@@ -39,6 +39,7 @@ class _BmiHistoryPageState extends State<BmiHistoryPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('BMI History'),
+        backgroundColor: Colors.brown,
       ),
       drawer: const CustomDrawer(),
       body: _isLoading

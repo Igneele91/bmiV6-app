@@ -43,6 +43,7 @@ class _BmiCalculatorResultPageState extends State<BmiCalculatorResultPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('BMI Calculator Result'),
+        backgroundColor: Colors.brown,
       ),
       drawer: const CustomDrawer(),
       body: Column(

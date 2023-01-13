@@ -11,6 +11,7 @@ class BmiRatingPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('BMI Rating Legend'),
+        backgroundColor: Colors.brown,
       ),
       drawer: const CustomDrawer(),
       body: ListView.separated(
