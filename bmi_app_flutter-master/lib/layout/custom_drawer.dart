@@ -2,7 +2,7 @@ import 'package:bmi_app_flutter/calculator/bmi_calculator_page.dart';
 import 'package:bmi_app_flutter/history/bmi_history_page.dart';
 import 'package:bmi_app_flutter/rating/bmi_rating_page.dart';
 import 'package:flutter/material.dart';
-
+import 'package:bmi_app_flutter/users/users.dart';
 import '../calculator/home_page.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -77,7 +77,7 @@ class CustomDrawer extends StatelessWidget {
             onTap: () => {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Placeholder()),
+                MaterialPageRoute(builder: (context) => const UserPage()),
               )
             },
           ),

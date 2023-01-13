@@ -38,7 +38,7 @@ class HomePage extends StatelessWidget {
                 child: ElevatedButton(
                   child: const Text(
                     'Open BMI Calculator',
-                    style: TextStyle(color: Colors.yellow),
+                    style: TextStyle(color: Colors.white),
                   ),
                   onPressed: () {
                     Navigator.push(
