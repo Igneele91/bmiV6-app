@@ -4,6 +4,7 @@ import 'package:bmi_app_flutter/rating/bmi_rating_page.dart';
 import 'package:flutter/material.dart';
 
 import '../calculator/home_page.dart';
+import '../users/users.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({Key? key}) : super(key: key);
@@ -67,6 +68,17 @@ class CustomDrawer extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => const BmiHistoryPage()),
+              )
+            },
+          ),
+
+          ListTile(
+            leading: const Icon(Icons.account_box),
+            title: const Text('Users'),
+            onTap: () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Placeholder()),
               )
             },
           ),
