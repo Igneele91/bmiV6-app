@@ -19,7 +19,7 @@ class CustomDrawer extends StatelessWidget {
             height: 110.0,
             child: DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.blue,
+                color: Colors.brown,
               ),
               child: Text(
                 'BMI App Menu',
@@ -78,7 +78,7 @@ class CustomDrawer extends StatelessWidget {
             onTap: () => {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Placeholder()),
+                MaterialPageRoute(builder: (context) => const Placeholder()),
               )
             },
           ),
