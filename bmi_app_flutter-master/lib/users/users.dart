@@ -15,7 +15,7 @@ class _UserPageState extends State<UserPage> {
   TextEditingController nameController = TextEditingController();
   String? _activeUser;
   List<String>? _userList;
-  List<BmiEntry>? _bmiEntryList;
+
 
   @override
   void initState() {
@@ -59,7 +59,7 @@ class _UserPageState extends State<UserPage> {
                         value: value,
                         child: Text(value),
                       );
-                    })?.toList(),
+                    }).toList(),
                     onChanged: (String? value) {
                       setState(() {
                         _saveActiveUser(value!);
@@ -124,10 +124,10 @@ class _UserPageState extends State<UserPage> {
     _userList!.add(name);
   }
 
-  void _saveBmiEntries(BmiEntry entry) {
+  /* void _saveBmiEntries(BmiEntry entry) {
     _bmiEntryList ??= <BmiEntry>[];
     _bmiEntryList!.add(entry);
-  }
+  } */
 
   void _saveActiveUser(String name) {
     _activeUser = name;
