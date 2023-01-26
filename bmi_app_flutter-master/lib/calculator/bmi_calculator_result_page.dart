@@ -1,7 +1,7 @@
-import 'package:bmi_app_flutter/database/sql_helper.dart';
-import 'package:bmi_app_flutter/layout/custom_drawer.dart';
-import 'package:bmi_app_flutter/rating/bmi_rating_detail_page.dart';
-import 'package:bmi_app_flutter/util/bmi.dart';
+import 'package:bmi_app_flutter_v6/database/sql_helper.dart';
+import 'package:bmi_app_flutter_v6/layout/custom_drawer.dart';
+import 'package:bmi_app_flutter_v6/rating/bmi_rating_detail_page.dart';
+import 'package:bmi_app_flutter_v6/util/bmi.dart';
 import 'package:flutter/material.dart';
 
 class BmiCalculatorResultPage extends StatefulWidget {

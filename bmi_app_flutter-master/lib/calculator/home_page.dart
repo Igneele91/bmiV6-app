@@ -1,5 +1,5 @@
-import 'package:bmi_app_flutter/calculator/bmi_calculator_page.dart';
-import 'package:bmi_app_flutter/layout/custom_drawer.dart';
+import 'package:bmi_app_flutter_v6/calculator/bmi_calculator_page.dart';
+import 'package:bmi_app_flutter_v6/layout/custom_drawer.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {

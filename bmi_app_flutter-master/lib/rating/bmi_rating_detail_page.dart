@@ -1,4 +1,4 @@
-import 'package:bmi_app_flutter/util/bmi_rating.dart';
+import 'package:bmi_app_flutter_v6/util/bmi_rating.dart';
 import 'package:flutter/material.dart';
 
 class BmiRatingDetailPage extends StatefulWidget {

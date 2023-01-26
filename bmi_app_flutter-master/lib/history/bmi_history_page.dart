@@ -1,5 +1,5 @@
-import 'package:bmi_app_flutter/database/sql_helper.dart';
-import 'package:bmi_app_flutter/layout/custom_drawer.dart';
+import 'package:bmi_app_flutter_v6/database/sql_helper.dart';
+import 'package:bmi_app_flutter_v6/layout/custom_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 

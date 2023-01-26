@@ -1,4 +1,4 @@
-import 'package:bmi_app_flutter/users/users_settings.dart';
+import 'package:bmi_app_flutter_v6/users/users_settings.dart';
 import 'package:flutter/material.dart';
 
 
