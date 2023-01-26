@@ -1,5 +1,8 @@
 import 'package:sqflite/sqflite.dart' as sql;
 
+
+// Abschnit 1 bis Zeile 38 Sql lite
+
 class SQLHelper {
   static const String databaseName = "bmi";
 
@@ -37,72 +40,11 @@ class SQLHelper {
     return db.query(databaseName, orderBy: "createdAt DESC");
   }
 
-  // User Reference
-  static Future<int> createUser(String username) async {
-    final db = await SQLHelper.db();
+  // Neuer Teil für die User Abschnitt
 
-    final data = {'username': username};
-    final id = await db.insert('Users', data,
-        conflictAlgorithm: sql.ConflictAlgorithm.replace);
-    return id;
-  }
 
-  static Future<List<Map<String, dynamic>>> getUsers() async {
-    final db = await SQLHelper.db();
-    return db.query('Users', orderBy: "createdAt DESC");
-  }
 
-  static Future<int> createBmi(double height, double weight, int userId) async {
-    final db = await SQLHelper.db();
 
-    final data = {'height': height, 'weight': weight, 'userId': userId};
-    final id = await db.insert('Bmi', data,
-        conflictAlgorithm: sql.ConflictAlgorithm.replace);
-    return id;
-  }
-
-  static Future<List<Map<String, dynamic>>> getBmiForUser(int userId) async {
-    final db = await SQLHelper.db();
-    return db.query('Bmi', where: 'userId = ?', whereArgs: [userId], orderBy: "createdAt DESC");
-  }
-
-  static Future<List<Map<String, dynamic>>> getBmiForUserWithUsername(String username) async {
-    final db = await SQLHelper.db();
-    return db.rawQuery('SELECT Bmi.id, Bmi.height, Bmi.weight, Bmi.createdAt, Users.username FROM Bmi INNER JOIN Users ON Bmi.userId = Users.id WHERE Users.username = ?', [username]);
-  }
-
-  static Future<List<Map<String, dynamic>>> getBmiForUserWithUsernameAndDate(String username, String date) async {
-    final db = await SQLHelper.db();
-    return db.rawQuery('SELECT Bmi.id, Bmi.height, Bmi.weight, Bmi.createdAt, Users.username FROM Bmi INNER JOIN Users ON Bmi.userId = Users.id WHERE Users.username = ? AND Bmi.createdAt LIKE ?', [username, date + '%']);
-  }
-
-  static Future<List<Map<String, dynamic>>> getBmiForUserWithUsernameAndDateRange(String username, String startDate, String endDate) async {
-    final db = await SQLHelper.db();
-    return db.rawQuery('SELECT Bmi.id, Bmi.height, Bmi.weight, Bmi.createdAt, Users.username FROM Bmi INNER JOIN Users ON Bmi.userId = Users.id WHERE Users.username = ? AND Bmi.createdAt BETWEEN ? AND ?', [username, startDate, endDate]);
-  }
-
-  // Wie dieser Code auf meinen Code angepasst
-  /* static Future saveUser(String username) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    prefs.setString('selectedUser', username);
-  }
-
-  static Future<String?> loadUser() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    var loadedUser = prefs.getString('selectedUser');
-    return loadedUser;
-  }
-
-  static Future saveUserList(List<String> users) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    prefs.setStringList('Users', users);
-  }
-
-  static Future<List<String>?> loadUserList() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    var loadedUsers = prefs.getStringList('Users');
-    return loadedUsers;
-  } */
 
   static Future saveUser(String username) async {
     final db = await SQLHelper.db();
