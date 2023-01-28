@@ -24,7 +24,7 @@ class _BmiRatingDetailPageState extends State<BmiRatingDetailPage> {
         backgroundColor: Colors.brown,
       ),
       body: Column(
-        children: <Widget>[
+        children: [
           const SizedBox(height: 150),
           Center(
             child: Text(

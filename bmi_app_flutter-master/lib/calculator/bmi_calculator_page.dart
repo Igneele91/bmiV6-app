@@ -27,7 +27,7 @@ class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
   Widget build(BuildContext context) {
     // Build a Form widget using the _formKey created above.
     return Scaffold(
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Colors.blueGrey,
         appBar: AppBar(
           title: const Text('BMI Calculator'),
           backgroundColor: Colors.brown,
@@ -48,6 +48,11 @@ class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
                   ],
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),
+                    // hintergrund farbe weiss der textfelder
+                    fillColor: Colors.white,
+                    filled: true,
+                    // schriftfarbe der labeltexte schwarze schrift
+                    labelStyle: TextStyle(color: Colors.black),
                     labelText: 'My Height (in cm)',
                   ),
                   validator: (value) {
@@ -70,6 +75,9 @@ class _BmiCalculatorPageState extends State<BmiCalculatorPage> {
                   ],
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),
+                    fillColor: Colors.white,
+                    filled: true,
+                    labelStyle: TextStyle(color: Colors.black),
                     labelText: 'My Weight (in kg)',
                   ),
                   validator: (value) {
